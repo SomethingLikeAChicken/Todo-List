@@ -5,9 +5,7 @@ This is my first Angular project, that i started so I could learn how the basics
 At the current state the project is, it isnt ready to be used. With the current state the todos cant be categorized and thats what im trying to implement at the moment.
 
 # Ideas
--Category System
--OAuth
--Firebase compatibility
+Category System, OAuth, Firebase compatibility
 
 # TodoList
 
