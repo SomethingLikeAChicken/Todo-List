@@ -1,3 +1,14 @@
+# Description
+This is my first Angular project, that i started so I could learn how the basics of Angular work.
+
+# Current State
+At the current state the project is, it isnt ready to be used. With the current state the todos cant be categorized and thats what im trying to implement at the moment.
+
+# Ideas
+-Category System
+-OAuth
+-Firebase compatibility
+
 # TodoList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
