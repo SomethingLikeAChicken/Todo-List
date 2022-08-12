@@ -1,17 +1,36 @@
-<form>
-    <input 
-        type="text"
-        name="inputCName"
-        placeholder="Enter category name..."
-        class="category-input"
-        [(ngModel)] ="inputCategory"
-        />      <!--Categoryname Input Textfield-->
-    <input 
-        type="text"
-        name="inputCDescription"
-        placeholder="Enter description..."
-        class="category-input"
-        [(ngModel)] ="inputDescription"
-        />      <!--Description Input Textfield-->
-    <input type="submit" value="Add Category" class="category-submit" (click)="addCategory()">
-</form>
+<div class="categories">
+  <form>
+    <input
+      type="text"
+      name="inputCName"
+      placeholder="Enter category name..."
+      class="name-input"
+      [(ngModel)]="inputCategory"
+    />
+    <!--Categoryname Input Textfield-->
+    <input
+      type="text"
+      name="inputCDescription"
+      placeholder="Enter description..."
+      class="description-input"
+      [(ngModel)]="inputDescription"
+    />
+    <!--Description Input Textfield-->
+    <input
+      type="submit"
+      value="Add Category"
+      class="category-submit"
+      (click)="addCategory()"
+    />
+  </form>
+  <div *ngIf="categories.length > 0; else elseBlock" class="title">Your Categories!</div>
+  <ng-template #elseBlock> 
+    <div class="elseBlock">Go on and create your first Category!</div>
+  </ng-template>
+  <div *ngFor="let category of categories; let i = index" class="category">
+    <div class="index">{{ i + 1 }}</div>
+    <div class="content">{{ category.content }}</div>
+    <div class="description">{{ category.description }}</div>
+    <button class="delete" (click)="deleteCategory(i)">Remove</button>
+  </div>
+</div>

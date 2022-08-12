@@ -3,24 +3,24 @@ import { Category } from '../models/Category';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent implements OnInit {
+  categories: Array<Category> = [];
+  inputCategory: string = '';
+  inputDescription: string = '';
+  constructor() {}
 
-  categories : Array<Category> = [];
-  inputCategory : string = ""; 
-  inputDescription : string = "";
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  addCategory(){
+  ngOnInit(): void {}
+  addCategory() {
     this.categories.push({
       content: this.inputCategory,
       description: this.inputDescription
-    })
-    this.inputCategory = "";
-    this.inputDescription = "";
+    });
+    this.inputCategory = '';
+    this.inputDescription = '';
   }
-
+  deleteCategory(id:number){
+    this.categories = this.categories.filter((v, i) => i != id);
+  }
 }
