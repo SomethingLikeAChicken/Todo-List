@@ -9,7 +9,6 @@ export class TodosComponent implements OnInit {
 
   todos: Array<Todo> = [];
   inputTodo:string ="";
-  inputCategory:string = "";
   todosIsEmpty = false;
   constructor() {}
 
@@ -47,14 +46,5 @@ export class TodosComponent implements OnInit {
     for(let i = 0; i <= this.todos.length; i++){
       this.todos.splice(i, this.todos.length);
     }
-  }
-  isButtonVisible(){
-    if(this.todos.length == 0)
-  {
-    this.todosIsEmpty = true;
-  }else{
-    this.todosIsEmpty = false;
-  }
-    
   }
 }
